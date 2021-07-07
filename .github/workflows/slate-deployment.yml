@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to SLATE
         id: deploy
         run: |
-          if [ ${{ github.event.before }} -eq "0000000000000000000000000000000000000000" ] || [ ${{ github.event.after }} -eq "0000000000000000000000000000000000000000" ] ; then
+          if [ "${{ github.event.before }}" -eq "0000000000000000000000000000000000000000" ] || [ "${{ github.event.after }}" -eq "0000000000000000000000000000000000000000" ] ; then
             echo 'New repo nothing to do...'
             exit 0
           fi
