@@ -15,9 +15,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Pull down automation script
-        run: curl -fsSL https://raw.githubusercontent.com/slateci/gitops-automation-script/main/PushUpdates.py -o PushUpdates.py
-
       - name: Install Python dependencies
         run: pip install -U requests
 
